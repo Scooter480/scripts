@@ -50,7 +50,7 @@ print("This is for enumeration purposes only!")
 print("\n")
 time.sleep(6)
 
-# Create results file and start!
+# Get start time and begin!
 now = datetime.now()
 current_time = now.strftime("%H:%M:%S")
 print("/******************************/")
