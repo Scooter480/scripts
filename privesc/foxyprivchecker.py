@@ -136,7 +136,7 @@ print("/***************************************/")
 print("Checking for 'password' string in /etc...")
 print("/***************************************/")
 print("\n")
-pass_etc = os.system("grep password /etc -R 2>/dev/unll")
+pass_etc = os.system("grep password /etc -R 2>/dev/null")
 print("\n")
 
 # Check for usernames in /var/log
