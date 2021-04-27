@@ -4,7 +4,7 @@
 # Version: 0.1
 # Github: https://github.com/jessisec
 # Twitter: @jessitakes
-# Usage: python3 jsec_privs.py
+# Usage: python3 foxyprivchecker.py
 
 import time
 import os
