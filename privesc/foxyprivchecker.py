@@ -37,6 +37,7 @@ print("""\
 print("\n")
 print("/***********************************/")
 print("Foxy Priv Checker!")
+print("Version: 0.1")
 print("A very simple linux privesc script :)")
 print("Written by. Jessi <3")
 print("Github: https://github.com/jessisec")
@@ -105,6 +106,7 @@ print("Checking netstat...")
 print("/******************/")
 print("\n")
 netstat = os.system("netstat -an")
+print("\n")
 
 # Check for file permissions
 user = getpass.getuser()
